@@ -1,9 +1,15 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 
 const Profile = (props)=>{
-    let userId = window.location.pathname.split("/")[2];
-    console.log(userId);
+    let temp_path =  window.location.pathname.split("/");
+    let userId = temp_path[2];
     let user = props.function(userId);
+
+    if (temp_path.length==3){
+        window.location.pathname = window.location.pathname+'/'+user.id;
+    }
+
     return (<div className="row">
             <div className="col-sm-3">
                 <img src={user.avatar} width="90%" alt=""/>

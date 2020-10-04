@@ -3,15 +3,12 @@ import './App.css';
 import {BrowserRouter, NavLink, Route} from "react-router-dom";
 import Profile from "./components/Profile";
 import Friends from "./components/Friends";
+import Settings from "./components/Settings";
 
 
 const Message = ()=>{
     return <h1>Страница с сообщениями</h1>
 }
-const Settings = ()=>{
-    return <h1>Страница с настройками</h1>
-}
-
 
 const Menu = ()=>{
     return <div className="nav flex-column nav-pills" aria-orientation="vertical">
@@ -32,7 +29,7 @@ function App(props) {
                     <div className="col-sm-9">
                         <Route path="/users/profile" render={()=><Profile function={props.functions.key_getUser}/>}/>
                         <Route path="/users/message" component={Message}/>
-                        <Route path="/users/settings" component={Settings}/>
+                        <Route path="/users/settings" render={()=><Settings function={props.functions.key_getUser}/>}/>
                         <Route path="/users/friends" render={()=><Friends function={props.functions.key_getUsers}/>}/>
                     </div>
                 </div>

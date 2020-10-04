@@ -1,9 +1,12 @@
 /* user из БД */
+import {NavLink} from "react-router-dom";
+import React from "react";
+
 const user = {
-    name: "Иван",
-    lastname: "Иванов",
+    name: "Сидор",
+    lastname: "Моргунов",
     email: "ivanov@mail.ru",
-    id: "1",
+    id: 1,
     about: "Тут я рассказываю о себе...",
     avatar: "https://www.pngitem.com/pimgs/m/80-800194_transparent-users-icon-png-flat-user-icon-png.png"
 }
@@ -23,7 +26,9 @@ const users = {
 
 export function getUser(userId){
     for (let i = 0; i < Object.keys(users).length; i++)
-        if (users[i].id == userId) return users[i];
+        if (users[i].id == userId){
+            return users[i];
+        }
     return user;
 }
 export function getUsers(){

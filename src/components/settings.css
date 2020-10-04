@@ -1,0 +1,28 @@
+.edit-btn{
+    color:blue;
+    cursor:pointer;
+}
+.edit-btn:hover{
+    color:navy;
+}
+.save-btn{
+    color:green;
+    cursor:pointer;
+}
+.save-btn:hover{
+    color:lime;
+}
+.cancel-btn{
+    color:maroon;
+    cursor:pointer;
+}
+.cancel-btn:hover{
+    color:red;
+}
+.userText{
+    color: purple;
+    font:  bold italic 20px fantasy;
+}
+.buttonText{
+    font:  bold 18px SansSerif;
+}
